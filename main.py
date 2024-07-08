@@ -178,11 +178,11 @@ async def account_login(bot: Client, m: Message):
                         await copy.copy(chat_id = -1001974000179)
                         count+=1
                         os.remove(ka)
-                        time.sleep(1)
-                    except FloodWait as e:
-                        await m.reply_text(str(e))
-                        time.sleep(e.x)
-                        continue
+                        
+                    
+                        
+                       
+                        
                 elif ".pdf" in url:
                     try:
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
@@ -192,10 +192,10 @@ async def account_login(bot: Client, m: Message):
                         await copy.copy(chat_id = -1001974000179)
                         count += 1
                         os.remove(f'{name}.pdf')
-                    except FloodWait as e:
-                        await m.reply_text(str(e))
-                        time.sleep(e.x)
-                        continue
+                    
+                        
+                      
+                        
                 else:
                     prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by JAIDEEP**")
                     res_file = await helper.download_video(url, cmd, name)
